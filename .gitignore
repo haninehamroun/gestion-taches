@@ -1,0 +1,23 @@
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+.thonny/
+
+venv/
+.venv/
+
+
+*.swp
+*.bak
+*.tmp
+
+*.log
+
+.idea/
+.vscode/
+
+Thumbs.db  # Windows
