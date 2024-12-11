@@ -3,9 +3,9 @@ fichier_taches= "taches.txt"
 # Charger les tâches depuis un fichier texte
 def charger_taches_txt():
     taches = []
-    fichier=open("fichier_taches","a+") 
-    fichier.seek(0)  
-    for i in fichier:
+    with open(fichier_taches, "a+", encoding="utf-8") as fichier:
+      fichier.seek(0)  
+      for i in fichier:
             if i.strip(): 
                 titre, description, termine = i.strip().split("|")
                 taches.append({
@@ -17,7 +17,7 @@ def charger_taches_txt():
 
 # Sauvegarder les tâches dans un fichier texte
 def sauvegarder_taches_txt(taches):
-    fichier=open("fichier_taches","w") 
+  with open(fichier_taches, "w", encoding="utf-8") as fichier:
     for j in taches:
             fichier.write(f"{j['titre']}|{j['description']}|{j['termine']}\n")
 
